@@ -18,6 +18,21 @@
           {{ estudiante.nombre }} {{ estudiante.apellido }} (Cédula:
           {{ estudiante.cedula }})
         </router-link>
+
+        <div class="actions">
+          <button
+            @click.prevent="abrirModalEdicion(estudiante)"
+            class="btn-edit"
+          >
+            Editar
+          </button>
+          <button
+            @click.prevent="eliminarEstudiante(estudiante.url)"
+            class="btn-delete"
+          >
+            Eliminar
+          </button>
+        </div>
       </li>
     </ul>
     <p v-else>No hay estudiantes registrados.</p>
