@@ -3,7 +3,9 @@ import HomeView from "../views/HomeView.vue";
 import Login from "../views/Login.vue"; // Tu nuevo componente de login
 import EstudiantesList from "../views/EstudiantesList.vue"; // Tu nuevo componente de lista de estudiantes
 import EstudianteDetail from "../views/EstudianteDetail.vue"; // ¡Importa el nuevo componente!
+
 import EstudianteNuevo from "../views/EstudianteNuevo.vue"; // Nueva importación para el formulario de nuevo estudiante
+import TelefonosList from "../views/TelefonosList.vue"; // Nueva importación para la lista de teléfonos
 
 const routes = [
   {
@@ -21,6 +23,12 @@ const routes = [
     name: "EstudiantesList",
     component: EstudiantesList,
     meta: { requiresAuth: true }, // Marca esta ruta como protegida
+  },
+  {
+    path: "/telefonos",
+    name: "TelefonosList",
+    component: TelefonosList,
+    meta: { requiresAuth: true },
   },
   {
     path: "/estudiantes/nuevo",
